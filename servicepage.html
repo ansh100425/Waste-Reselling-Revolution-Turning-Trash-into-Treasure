@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCycle - Our Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styleservice.css">
+    <style>
+        /* Inherit main styles */
+        :root {
+            --primary: #2ecc71;
+            --secondary: #27ae60;
+            --dark: #34495e;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Services Page Specific Styles */
+        .services-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .service-details {
+            padding: 80px 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-right: 30px;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 10px;
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        .service-content h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .service-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .service-features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .cta-section .btn {
+            background: white;
+            color: var(--primary);
+            margin-top: 20px;
+        }
+
+        .cta-section .btn:hover {
+            background: var(--light);
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+            .service-icon {
+                margin: 0 auto 20px;
+            }
+
+            .service-features li {
+                justify-content: center;
+            }
+        
+        
+    </style>
+</head>
+<body>
+    <section class="services-hero">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive waste management solutions for a sustainable future</p>
+        </div>
+    </section>
+
+    <section class="service-details">
+        <div class="container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Waste Collection & Recycling</h3>
+                    <p>Professional waste collection service with a focus on recycling and sustainability.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Door-to-door collection</li>
+                        <li><i class="fas fa-check"></i> Scheduled pickups</li>
+                        <li><i class="fas fa-check"></i> Proper waste segregation</li>
+                        <li><i class="fas fa-check"></i> Eco-friendly disposal</li>
+                    </ul>
+                    <a href="pickup.html" class="btn">Schedule Pickup</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Buy & Sell Recyclables</h3>
+                    <p>Turn your waste into revenue while contributing to environmental conservation.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Competitive pricing</li>
+                        <li><i class="fas fa-check"></i> Multiple waste categories</li>
+                        <li><i class="fas fa-check"></i> Instant payments</li>
+                        <li><i class="fas fa-check"></i> Bulk collection available</li>
+                    </ul>
+                    <a href="catgory.html" class="btn">Start Selling</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Corporate Waste Management</h3>
+                    <p>Customized waste management solutions for businesses and organizations.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Compliance with regulations</li>
+                        <li><i class="fas fa-check"></i> Regular reporting</li>
+                        <li><i class="fas fa-check"></i> Staff training</li>
+                        <li><i class="fas fa-check"></i> Waste audit services</li>
+                    </ul>
+                    <a href="#" class="btn">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Join thousands of others who are contributing to a cleaner, greener planet</p>
+            <a href="#" class="btn">Contact Us Today</a>
+        </div>
+    </section>
+</body>
+</html>
