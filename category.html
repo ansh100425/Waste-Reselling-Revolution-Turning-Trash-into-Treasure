@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCycle - Waste Categories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Inherit main styles */
+        :root {
+            --primary: #2ecc71;
+            --secondary: #27ae60;
+            --dark: #34495e;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Categories Page Specific Styles */
+        .categories-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .category-grid {
+            padding: 80px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .category-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .category-details {
+            padding: 25px;
+        }
+
+        .category-details h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .price-range {
+            color: var(--primary);
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .features i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .cta-section .btn {
+            background: white;
+            color: var(--primary);
+            margin-top: 20px;
+        }
+
+        .cta-section .btn:hover {
+            background: var(--light);
+        }
+
+        @media (max-width: 768px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="categories-hero">
+        <div class="container">
+            <h1>Waste Categories</h1>
+            <p>Explore different types of waste we handle and their current rates</p>
+        </div>
+    </section>
+
+    <section class="category-grid">
+        <div class="container">
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Plastic Waste">
+                </div>
+                <div class="category-details">
+                    <h3>Plastic Waste</h3>
+                    <p>All types of plastic materials including bottles, containers, and packaging.</p>
+                    <div class="price-range">₹15 - ₹30 per kg</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> PET Bottles</li>
+                        <li><i class="fas fa-check"></i> HDPE Containers</li>
+                        <li><i class="fas fa-check"></i> Plastic Packaging</li>
+                        <li><i class="fas fa-check"></i> Clean Plastic Items</li>
+                    </ul>
+                    <a href="pickup.html" class="btn">Schedule Pickup</a>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1596230529625-7ee10f7b09b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Paper Waste">
+                </div>
+                <div class="category-details">
+                    <h3>Paper Waste</h3>
+                    <p>Various types of paper products including newspapers, magazines, and cardboard.</p>
+                    <div class="price-range">₹10 - ₹20 per kg</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Newspapers</li>
+                        <li><i class="fas fa-check"></i> Magazines</li>
+                        <li><i class="fas fa-check"></i> Cardboard Boxes</li>
+                        <li><i class="fas fa-check"></i> Office Paper</li>
+                    </ul>
+                    <a href="pickup.html" class="btn">Schedule Pickup</a>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1601064674450-1d728fddb8d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Metal Waste">
+                </div>
+                <div class="category-details">
+                    <h3>Metal Waste</h3>
+                    <p>All types of metal scrap including iron, aluminum, copper, and brass.</p>
+                    <div class="price-range">₹40 - ₹120 per kg</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Iron Scrap</li>
+                        <li><i class="fas fa-check"></i> Aluminum Items</li>
+                        <li><i class="fas fa-check"></i> Copper Wire</li>
+                        <li><i class="fas fa-check"></i> Brass Items</li>
+                    </ul>
+                    <a href="pickup.html" class="btn">Schedule Pickup</a>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="E-Waste">
+                </div>
+                <div class="category-details">
+                    <h3>E-Waste</h3>
+                    <p>Electronic waste including old devices, computers, and accessories.</p>
+                    <div class="price-range">Price On Inspection</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Old Computers</li>
+                        <li><i class="fas fa-check"></i> Mobile Phones</li>
+                        <li><i class="fas fa-check"></i> Electronic Parts</li>
+                        <li><i class="fas fa-check"></i> Batteries</li>
+                    </ul>
+                    <a href="pickup.html" class="btn">Schedule Pickup</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Recycle?</h2>
+            <p>Schedule a pickup today and get the best rates for your waste</p>
+            <a href="#" class="btn">Contact Us Now</a>
+        </div>
+    </section>
+</body>
+</html>
