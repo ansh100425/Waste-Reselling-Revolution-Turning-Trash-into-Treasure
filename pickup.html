@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCycle - Schedule Pickup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --secondary: #27ae60;
+            --dark: #34495e;
+            --light: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            padding-top: 80px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--dark);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .waste-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .waste-type {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .waste-type input[type="checkbox"] {
+            width: auto;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule a Pickup</h1>
+        <form id="pickupForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Pickup Address</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Waste Types</label>
+                <div class="waste-types">
+                    <div class="waste-type">
+                        <input type="checkbox" id="plastic" name="wasteTypes" value="plastic">
+                        <label for="plastic">Plastic</label>
+                    </div>
+                    <div class="waste-type">
+                        <input type="checkbox" id="paper" name="wasteTypes" value="paper">
+                        <label for="paper">Paper</label>
+                    </div>
+                    <div class="waste-type">
+                        <input type="checkbox" id="metal" name="wasteTypes" value="metal">
+                        <label for="metal">Metal</label>
+                    </div>
+                    <div class="waste-type">
+                        <input type="checkbox" id="ewaste" name="wasteTypes" value="ewaste">
+                        <label for="ewaste">E-Waste</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="pickupDate">Preferred Pickup Date</label>
+                <input type="date" id="pickupDate" name="pickupDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pickupTime">Preferred Pickup Time</label>
+                <select id="pickupTime" name="pickupTime" required>
+                    <option value="">Select Time</option>
+                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                    <option value="afternoon">Afternoon (12 PM - 3 PM)</option>
+                    <option value="evening">Evening (3 PM - 6 PM)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Schedule Pickup</button>
+        </form>
+        <div id="successMessage" class="success-message">
+            Pickup scheduled successfully! We will contact you soon to confirm the details.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('pickupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get selected waste types
+            const wasteTypes = Array.from(document.querySelectorAll('input[name="wasteTypes"]:checked'))
+                .map(checkbox => checkbox.value);
+
+            // Create pickup details object
+            const pickupDetails = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                wasteTypes: wasteTypes,
+                pickupDate: document.getElementById('pickupDate').value,
+                pickupTime: document.getElementById('pickupTime').value
+            };
+
+            // Log pickup details (you can replace this with your actual backend API call)
+            console.log('Pickup Details:', pickupDetails);
+
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form
+            this.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+
+        // Set minimum date to tomorrow
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        document.getElementById('pickupDate').min = tomorrow.toISOString().split('T')[0];
+    </script>
+</body>
+</html>
