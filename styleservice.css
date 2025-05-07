@@ -1,0 +1,145 @@
+:root {
+    --primary: #2ecc71;
+    --secondary: #27ae60;
+    --dark: #34495e;
+    --light: #ecf0f1;
+    --accent: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Services Page Specific Styles */
+.services-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.service-details {
+    padding: 80px 0;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: var(--primary);
+    margin-right: 30px;
+    padding: 20px;
+    background: var(--light);
+    border-radius: 10px;
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-content h3 {
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.service-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.service-features i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--secondary);
+}
+
+.cta-section {
+    background: var(--primary);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-section h2 {
+    margin-bottom: 20px;
+}
+
+.cta-section .btn {
+    background: white;
+    color: var(--primary);
+    margin-top: 20px;
+}
+
+.cta-section .btn:hover {
+    background: var(--light);
+}
+
+@media (max-width: 768px) {}
+    .service-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-icon {
+        margin: 0 auto 20px;
+    }
+
+    .service-features li {
+        justify-content: center;
+    }
