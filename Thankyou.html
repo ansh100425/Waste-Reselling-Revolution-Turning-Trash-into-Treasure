@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - EcoCycle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .thank-you-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .success-icon {
+            color: #2ecc71;
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #34495e;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .next-steps {
+            background: #f7f9fc;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .next-steps h2 {
+            color: #34495e;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .next-steps ul {
+            list-style: none;
+        }
+
+        .next-steps li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .next-steps li i {
+            color: #2ecc71;
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2ecc71;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <i class="fas fa-check-circle success-icon"></i>
+        <h1>Thank You for Choosing EcoCycle!</h1>
+        <p>We have received your service request and appreciate your commitment to responsible waste management.</p>
+        
+        <div class="next-steps">
+            <h2>What Happens Next?</h2>
+            <ul>
+                <li><i class="fas fa-check"></i> Our team will verify your request details</li>
+                <li><i class="fas fa-user"></i> A RecycleHelper will be assigned to assist you</li>
+                <li><i class="fas fa-clock"></i> You'll receive confirmation within 24 hours</li>
+                <li><i class="fas fa-phone"></i> We may contact you if additional information is needed</li>
+            </ul>
+        </div>
+
+        <p>For any immediate questions, feel free to contact our support team.</p>
+        <a href="index.html" class="btn">Return to Home</a>
+    </div>
+</body>
+</html>
